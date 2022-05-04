@@ -1,3 +1,4 @@
+#BATCH PROCESSING
 from confluent_kafka import Consumer
 from time import sleep
 import datetime
