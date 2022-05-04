@@ -7,21 +7,26 @@ install kafka using the tutorial here: https://www.youtube.com/watch?v=hyJZP-rgo
 Go to the following directories and run these commands
 
 cd $HADOOP_HOME
+
 ./sbin/start-all.sh
 
 cd $SPARK_HOME
+
 ./sbin/start-all.sh
 
 cd $KAFKA_HOME
+
 ./bin/zookeeper-server-start.sh config/zookeeper.properties
+
 ./bin/kafka-server-start.sh config/server.properties
 
-To check if kafka is consuming data correctly:
+To check if kafka is consuming data correctly(OPTIONAL):
 cd $KAFKA_HOME
 ./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --from-beginning -topic tweets
 
 Go to the directory containing produce_tweets.py
 Run this in another console:
+
 python3 produce_tweets.py
 
 Open another console and run the following command for spark AND MAKE SURE TO CHANGE PATH OF read_kafka_spark.py and error.txt
@@ -35,6 +40,7 @@ mysql -u root -p
 Enter password upon prompt.
 
 Delete the topic (The next time you restart the entire process):
+
 ./bin/kafka-topics.sh --bootstrap-server localhost:9092 --delete --topic tweets
 
 
@@ -45,7 +51,9 @@ https://linuxtut.com/en/be38fd4e080b188086e9/
 
 Startup kafka:
 cd $KAFKA_HOME
+
 ./bin/zookeeper-server-start.sh config/zookeeper.properties
+
 ./bin/kafka-server-start.sh config/server.properties
 
 Run Producer Python File:
