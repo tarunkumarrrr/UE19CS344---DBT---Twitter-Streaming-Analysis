@@ -6,7 +6,7 @@ import mysql.connector
 import re
 
 sc = SparkContext(appName = "test")
-print("Helolo")
+print("Hello")
 from pyspark.sql import SparkSession   
 spark = SparkSession.builder.getOrCreate()
 
