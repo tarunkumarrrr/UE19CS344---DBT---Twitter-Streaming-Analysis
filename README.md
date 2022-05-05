@@ -27,7 +27,7 @@ cd $KAFKA_HOME
 Go to the directory containing produce_tweets.py
 Run this in another console:
 
-python3 produce_tweets.py
+python3 produce_tweet.py
 
 Open another console and run the following command for spark AND MAKE SURE TO CHANGE PATH OF read_kafka_spark.py and error.txt
 
